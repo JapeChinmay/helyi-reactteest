@@ -1,6 +1,11 @@
 import React from "react";
 import logo from "../assets/logo.jpg";
 import location from "../assets/location.png";
+import cart from "../assets/cart.png";
+import heart from "../assets/heart.png";
+import user from "../assets/user.png";
+import locationDropdown from "../assets/location-dropdown.png";
+import userdropdown from "../assets/userdropdown.png";
 
 const Navbar = () => {
   return (
@@ -12,60 +17,73 @@ const Navbar = () => {
         alignItems: "center",
         padding: "1rem",
         width: "1920px",
-        height: "96px",
+        height: "50px",
         top: 0,
         left: 0,
         position: "fixed",
         color: "black",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <img
-            src={logo}
-            alt="logo"
-            style={{ height: "3rem", marginRight: "1rem" }}
-          />
-          <img
-            src={location}
-            alt="location-logo"
-            style={{ width: "20px", height: "26px", top: "1rem", left: "6px" }}
-          />
-        </div>
-      </div>
-
       <ul
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginLeft: "2rem",
-
+          marginLeft: "1rem",
+          alignItems: "center",
           listStyle: "none",
           gap: "1rem",
+          fontSize: "bold",
         }}
       >
-        <li>Select Location</li>
+        <img
+          src={logo}
+          alt="logo"
+          style={{ height: "3rem", marginRight: "1rem" }}
+        />
+
+        <div
+          style={{
+            marginLeft: "4px",
+            marginRight: "4px",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            gap: "2px",
+          }}
+        >
+          <img
+            src={location}
+            alt="location-logo"
+            style={{ height: "26px", top: "1rem", left: "6px" }}
+          />
+          <li>Select Location</li>
+          <img src={locationDropdown} alt="dropdown" />
+        </div>
         <li>Helyi for Franchise</li>
         <li>Helyi for Partner</li>
         <li>Helyi for Merchant</li>
         <li>Helyi Smart</li>
-        <li>Contact Us</li>
+        <li style={{ marginRight: "3rem" }}>Contact Us</li>
         <li>
-          <i
-            className="fas fa-shopping-cart"
-            style={{ fontSize: "1.5rem" }}
-          ></i>
+          <img src={cart} alt="cart" style={{ marginRight: "2rem" }} />
         </li>
         <li>
-          <i className="far fa-heart" style={{ fontSize: "1.5rem" }}></i>
+          <img src={heart} alt="heart" style={{ marginRight: "2rem" }} />
         </li>
-        <li style={{ display: "flex", alignItems: "center" }}>
+        <li
+          style={{ display: "flex", alignItems: "center", marginLeft: "auto" }}
+        >
           <img
-            src="/path/to/user-icon.png"
+            src={user}
             alt="User Icon"
             style={{ height: "2rem", marginRight: "0.5rem" }}
           />
           <p>Chinmay Jape</p>
+          <img
+            style={{ marginLeft: "2px" }}
+            src={userdropdown}
+            alt="userdropddown"
+          />
         </li>
       </ul>
     </nav>
