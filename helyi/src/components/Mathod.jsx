@@ -8,6 +8,7 @@ const Method = () => {
       className="overall-main"
       style={{
         background: "#F5F5F5",
+
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
