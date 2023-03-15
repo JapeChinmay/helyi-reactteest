@@ -10,7 +10,7 @@ const Coupons = () => {
         background: "#8E8E8E",
         width: "380px",
         height: "61px",
-        background: "white",
+
         color: "#8E8E8E",
         display: "flex",
         justifyContent: "flex-start",
